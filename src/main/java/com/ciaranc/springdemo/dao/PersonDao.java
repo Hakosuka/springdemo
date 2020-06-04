@@ -2,6 +2,7 @@ package com.ciaranc.springdemo.dao;
 
 import com.ciaranc.springdemo.model.Person;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -11,4 +12,6 @@ public interface PersonDao {
         UUID newId = UUID.randomUUID();
         return insertPerson(newId, person);
     }
+
+    List<Person> selectAllPeople();
 }
